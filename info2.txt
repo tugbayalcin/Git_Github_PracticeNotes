@@ -1,0 +1,33 @@
+Adım 1: Terminal uzerinden bir klasor olusturdum
+
+Adim 2: Klasorun icine dosya ekledim
+
+Adim 3: git status komutunu calistirdim
+		burada terminalin hata vermesini bekliyorum
+		Cunku ben ehr ne kadar bilgisayarimda klasor ve dosya olusturmus olsam da henuz bu klasor icin bir versiyon kontrol sistemi olusturmadim, yani klasorumde git yok ve bundan dolayi git komutlarini algilayamiyor
+		Klasorum/projem icin bir .git dosyasi, dolayisiyla da ws/stage/lr gibi depolama alanlarim olusturulmadi
+		Bunun icin projemin oldugu en dis klasorde git init komutunu calistirarak projem icin versiyon kontrol sistemi olusturacagim
+
+Adim 4: git init (bu komutu Git Egitimi klasorunun icinde calistiriyorum)
+		artik .git (bu bir gizli klasordur) klasorum ve dolayisiyla depolama alanlarim olustu. Bu asamadan sonra git komutlarim sorunsuzca calisacaktir
+ 		Komutu calistirdiktan sonra karsima bazi bilgilendirme yazilari cikar
+ 		olusturdugum git sisteminde baslangic ana dali olan dal default olarak 'master' kelimesiyle adlandirilmis
+ 		Ben dilersem bunda degisiklik yapabilirim ve git bana bunu nasil yapacagimi da soyluyor;
+ 		Teee en basta bu baslangic dal adimi configurasyon ayarlari ile yapilandirabilirim:  git config --global init.defaultBranch <ad>
+ 		Hatta burada master yerine kullanilan diger yaygin isimlerden de ornekler gorebiliyoruz: " 'master' yerine kullanılan diğer yaygın dal adları 'main', 'trunk', 'development' "
+ 		Veya ben dalimi olusturdum ancak adini degistirmek istiyorum. Bu durumda da aldigimiz oneri su sekildedir: " Yeni oluşturulan dal şu komutla yeniden adlandırılabilir: 	git branch -m <ad> "
+ 		Tabi bu komut adini degistirmek istedigimiz dal icerisinde calistirilmalidir
+
+Adim 5: Projem icerisinde git status komutunu calistirdim
+		Projemde bilgisayarimdan veya ide'mden yaptigim her degisiklik otomatik olarak working space denilen bir depoda tutulur
+		ancak benim bu degisiklikleri bir versiyon haline getirebilmem icin git',i degisikliklerden haberdar etmeliyim yani degisikliklerimi stage denilen depoya aktarmali ve onleri izlenebilir hale getirmeliyim
+		git status komutu ise bana hangi dosyalarda degisiklik yaptigimi ve bu dosyalardan hangilerini stage'e atip hangilerini atmadigimiyesil ve kirmizi renk vasitasiyla gosterir
+
+Adim 6: git add . komutunu calistirdim
+		Bu komut ile tum degisikliklerim staging areaya gonderildi ve git tarafindan takip edilebilir/izlenebilir hale geldi
+		Degisen dosyalarin tamamini degil de bazilarini stage'e gondermek istersem;
+		git add DosyaAdi komutunu calistiririm
+
+Adim 7: git status komutunu calistirdim
+		git add dedikten sonra git status diyerek durum kontrolu yaptigimda her yerin yesillenmis oldugunu gorurum
+		Bunun anlami yaptigim degisiklikler versiyon olabilmek icin hazir bir sekilde bekliyorlar

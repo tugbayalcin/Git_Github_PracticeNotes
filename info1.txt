@@ -1,0 +1,5 @@
+Bu dosya Git-Github Egitimi icin olusturdugum ilk dosyadir.
+Dosyamda bazi degisiklikler yaparak git komutlarini calisacagim
+Ve daha sonrasinda ise github uzerinden bazi senaryolar deneyecegim
+
+Basliyoruz ..

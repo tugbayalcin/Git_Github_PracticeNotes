@@ -1,0 +1,12 @@
+Bazi kisa notlar:
+
+1. Terminal uzerinden klasor/dosya olustururken eger klasor/dosya ismim bosluk karakteri iceriyorsa, bu ismi ' ' tek tirnaklar veya " " cift tirnaklar arasinda yazmaliyim
+Klasor olusturma komutu: mkdir KlasorAdi
+Dosya olusturma komutu : touch DosyaAdi
+
+2.Terminal uzerinden bir klasor/dosyayi herhangi bir uygulama ile birlikte acmak istedigimde eger uygulama adi bosluk karakteri iceriyorsa bu adi ' ' tek tirnaklar veya " " cift tirnaklar arasinda yazmaliyim
+Bir uygulamayi terminalden acma komutu: open -a UygulamaAdi
+Bir dosyayi bir uygulama ile birlikte terminalden acma komutu: 
+open dosyaPathi -a UygulamaAdi
+
+3.

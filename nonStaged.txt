@@ -1,0 +1,15 @@
+Bu dosyaya bir seyler ekleyecegim ve stage'e gonderilmemis degisiklikleri geri almayi deneyecegim
+
+Oncelikle git restore dosyaAdi ve git restore . komutlarini kullanmayi deneyecegim
+
+Dosyanin simdiye kadarki hali stage'e gonderildi, eger dosyanda degisiklik yaptiktan sonra save etmezsen bu degisiklik git tarafindan algilanmaz ve git status komutu her yeri yesil gosterir. Her degisikliginden sonra save edersen bu degisikligin de stage'e gonderilmesi gerektigini sana soyleyecektir. Simdi asagiya bir satir ekleyecek ve sonra onu geri almayi deneyecegim.
+Hazirsak basliyoruz .. 
+
+Bu paragrafin aynisindan bir tane daha ekleyecegim ve silinip silinmedigini gorecegiz 
+Ekledigim satir burasi ve her yeri karman corman yaptim aralara ekledim simdi nasil duzeltecegimi bilemiyorum, galiba yandim 
+nööö working space den geri alma komutunu kullanmaliyim :)
+
+Ta daaaa ikinci paragraf gitti 
+
+Simdi ayni islemi diff ile deneyelim. Cunku aradaki farki gercekten bilmiyorum. Yukaridaki paragrafin aynisini asagiya yapistiracak ve diff ile geri almayi deneyecegim. 
+
