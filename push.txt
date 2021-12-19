@@ -1,0 +1,19 @@
+git push -u origin tugba1 - githubta tugba1 olustur ve localdeki 							 tugba1 i ona pushla	
+
+git push origin tugba1  - localdeki tugba1'i remote'da varolan 							   tugba1'e pushla
+
+
+git push --set-upstream origin tugba1 - localdeki tugba1'i remote'daki tugba1'e default kil, varsayilan yap yani;
+
+tugba1 branch'inde ''
+
+olurda localdeki projemizin github repo linkini guncellemek istersek
+git remote set-url origin "repo link" komutunu yazariz
+
+eger ilk defa remote link ekleyeceksek
+
+git remote add origin "repolink" komutu yazilir
+
+simdi soyle yapalim githuba git elinle master branch olustur
+ve default brancini master yap
+
