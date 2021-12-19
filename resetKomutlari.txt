@@ -1,0 +1,5 @@
+Bu dosyada bazi degisiklikler yapacagim. Bu degisiklikleri stage'e gonderdikten sonra yeniden degisiklik yapacak ve 
+
+
+
+stage e atıyorum

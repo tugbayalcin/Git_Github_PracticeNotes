@@ -23,3 +23,6 @@ ws <-- s  		: git restore dosyaAdi
 s  <-- lr 		: git restore --staged dosyaAdi (burada ws degismez)
 ws <-- s <-- lr : git restore --staged --worktree (hem stage hem de ws lr ile ayni hale getirildi)
 
+
+git add yapilmis degisikligi stage area'dan workplace'e geri almak
+
