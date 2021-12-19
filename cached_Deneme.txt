@@ -1,0 +1,16 @@
+git rm --cached fileName komutu icin denemeler yapacagim.
+
+Bilgi: Bu komut working space'e dokunmaz
+	   Staging area'yi siler 
+
+Deneyelim bakalim. Asagiya bu oparagraftan bir tane daha kopyalayacagim ve dosyayi stage'e attiktan sonra komutu calistiracagim. Ardindan ws'de degisiklik olup olmadigina, paragrafin hala asagida durup durmadigina bakacak ve git status komutu ile de stage'deki durumuna bakacagim. 
+
+Deneyelim bakalim. Asagiya bu oparagraftan bir tane daha kopyalayacagim ve dosyayi stage'e attiktan sonra komutu calistiracagim. Ardindan ws'de degisiklik olup olmadigina, paragrafin hala asagida durup durmadigina bakacak ve git status komutu ile de stage'deki durumuna bakacagim. 
+
+Evet komutlardan sonraki gozlem: Gercekten de ws'de hisbir degisiklik olmadi. Ve git status kirmizi yakti. 
+
+Simdi bu durumdayken commit yapmayi deneyelim. Commit yapmamizda herhangi bir sikinti olmadi. Ancak bu dosya commit yapilirken stage'de bulunmadigi icin committe yer almadi. Dosya mi yer almadi yoksa degisiklikler mi ona bakalim :
+
+git show commitID komutunu calistiriyorum:
+dosyanin kendisi yer alamdi. Bu su demek rm silme komutu idi, bu komut stage'den yalnizca degisiklik olan kismi degil dosyanin tamamini siliyor yani cikariyor ama dosya ws de durmaya devam ediyor. Bundan dolayi commit ettigimizde dosyanin kendisi committe yer almiyor. 
+git commit -a -m "blabla" diyerek veya dosyayi once stage'e gonderip ardindan commit edersek dosyamiz da commitimizde yer alacaktir. 

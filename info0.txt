@@ -9,4 +9,4 @@ Bir uygulamayi terminalden acma komutu: open -a UygulamaAdi
 Bir dosyayi bir uygulama ile birlikte terminalden acma komutu: 
 open dosyaPathi -a UygulamaAdi
 
-3.
+3.hello
