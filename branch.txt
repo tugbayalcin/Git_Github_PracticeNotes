@@ -1,0 +1,5 @@
+git branch - branchlere bakar
+git branch tugba1 - yeni branch olusturur
+git checkout tugba1 -  tugba1 branchine geceis yapar
+git checkout -b tugba1 - tugba1 olusturur ve gecis yapar
+
