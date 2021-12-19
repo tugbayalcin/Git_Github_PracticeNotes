@@ -11,5 +11,15 @@ nööö working space den geri alma komutunu kullanmaliyim :)
 
 Ta daaaa ikinci paragraf gitti 
 
-Simdi ayni islemi diff ile deneyelim. Cunku aradaki farki gercekten bilmiyorum. Yukaridaki paragrafin aynisini asagiya yapistiracak ve diff ile geri almayi deneyecegim. 
+Simdi ayni islemi checkout ile deneyelim. Cunku aradaki farki gercekten bilmiyorum. Yukaridaki paragrafin aynisini asagiya yapistiracak ve checkout ile geri almayi deneyecegim. 
+
+Birkac deneme sonrasi edindigim bilgileri not ediyorum:
+Checkout komutu bizi istedigimiz bir yere goturur. tipki versiyonlar arasinda gecis yaptirdigi gibi. Nereye gitmek istedigimizi soyleriz ve gideriz.
+Degisiklikleri geri almmak icin kullandigimizda ise stage e atılmamis veya en kotu ihtimalle commit haline getirilmemis degisiklikleri geri alirken kullanabildigimize dikkat edelim. Burasi onemli cunku isin puf noktasi burasi. Checkout aslinda bizi kayitli olan son versiyona goturuyor, calisma alanimizi veya stage'i son kayit ile esliyor. 
+
+restore ise geri yukleme demektir. belirttigimiz repo head ile eslenir. Bu da aslinda kayitli olan son versiyonla eslemek demektir. Bundan dolayi checkout ile ayni isi yapmis olurlar 
+
+ws <-- s  		: git restore dosyaAdi
+s  <-- lr 		: git restore --staged dosyaAdi (burada ws degismez)
+ws <-- s <-- lr : git restore --staged --worktree (hem stage hem de ws lr ile ayni hale getirildi)
 
