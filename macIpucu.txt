@@ -1,0 +1,12 @@
+-----------------------------------------------------------------------
+
+Bir Uygulamayi Terminalde Acma: open -a uygulamaAdi
+* Uygulama adi bosluk karakteri iceriyorss cift veya tek tirnak icinde yazilmalidir
+
+-----------------------------------------------------------------------
+
+Bir Dosyayi Bir Uygulama Ile Terminalde Acma: open dosyaPathi -a uygulamaAdi
+* Uygulama adi bosluk karakteri iceriyorss cift veya tek tirnak icinde yazilmalidir
+
+-----------------------------------------------------------------------
+

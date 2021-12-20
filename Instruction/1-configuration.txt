@@ -1,0 +1,72 @@
+Not: Git komutlari ve bu komutlarin secenek ve parametreleri ile ilgili yardim almak istedigimizde asagidaki iki komutu kullanabiliriz:	
+1. git komutAdi --help  (example: git init --help)	
+2. git help komutAdi    (example: git help init)
+
+-------------------------------------------------------------------
+
+git --version : Bilgisayarda git kurulu olup olmadigini, kurulu ise 
+				hangi versiyonun kurulu oldugunu gosteren git 
+				komutudur.
+
+git config --list : Yapilandirilmis tum ayarlari listeler.
+
+git config --global -l : Global seviyede yapilandirilmis tum ayarlari 
+						 listeler
+
+git config --global user.name "Tgba Yalcin" : Kullanici adi tanimlama
+
+git config --global user.email "tubaayalcin@gmail.com" : Kullanici
+ 														 email tanimlama
+
+git config --global user.name : User name icin yapilandirilmis
+								ayarlari gosterir
+
+* Bu komut herhangi bir tekil ayar icin modifiye edilerek kullanilabilir
+* --global : Yalnizca belirtilen kullanici icin ayar yapar
+* --system : Tum kullanici ve projeler icin ayar yapar
+* Projenin icinde config'den sonra hicbirsey yazmaz isek yalnizca bu proje 
+  icin ayar yapar
+
+---------------------------------------------------------------------
+
+pwd : Hangi dosya/dizin icinde bulundugumuzu gosterir
+
+ls : Icinde bulunulan dizinin icinde bulunan dosyalari listeler
+
+ls -a : Icinde bulunulan dizin icindeki gizli dosyalar dahil tum dosyalari 
+		listeler
+
+cd klasorAdi : Dizinler arasi gecis yapar
+
+cd .. : Bir adim geri gider. Bir onceki dizine doner
+
+cd / : root'a yani eeeen basa gider.
+
+cd klasorAdininBirKismi * : Eegr klasorun adi uzun ise birkac karakter
+						    yazdiktan sonra * koyarsak, gerisi onemli degil
+						    sen hangisini getirecegini biliyorsun demis
+						    oluyoıruz (bende calismadi !)
+
+clead : Terminal ekranini temizler.
+
+mkdir klasorAdi: Terminalde iken istenilen dizin icine yeni klasor 
+				 olusturur. (New Folder) --> mkdir = mk directory demektir
+
+touch dosyaAdi.uzanti : Terminalde iken istenilen klasor icine yeni dosya 
+				 		olusturur. (New File)
+
+rm -r KlasorAdi : Klasor ve icindeki her seyi siler (-r = repersive,
+				  icindekileri de sildiren bu bayraktir)
+
+rm dosyaAdi.uzanti : Dosyayi siler
+
+git rm -f dosyaAdi.uzanti : Dosyayi projeden tamamen siler 
+
+* DELETE: Silme islemlerini yapabilmek icin, silinecek olan dosya/klasor 'un
+  disinda olmalisin
+
+
+
+
+
+
