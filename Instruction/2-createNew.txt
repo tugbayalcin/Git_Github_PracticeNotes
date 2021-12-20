@@ -1,0 +1,56 @@
+. git klasorunun olmadigi bir projede herhangi bbir git komutu calistiramazsin, hata alirsin
+
+git init : Terminalde proje path'inin icindeyken bu komutu calistirdigimizda 
+		   local repo create edilir. Yani .git klasoru olusur. Yani staging area ve local repository olusur.
+
+-------------------------------------------------------------------------------------
+STAGING AREA
+-------------------------------------------------------------------------------------
+
+git status : Working Place ve Staging Area ile ilgili durum bilgisi verir. 
+			 (Farklilikclari gosterir)
+			 * Yesil : 'Change to be commited' : git add ile WP'den SA'ya aktarilan dosyalar burada gorunur. Degisiklikler commit icin yani SA'dan LR'ya gonderilmeye hazir demektir. Gorunum sekli soyledir: 
+			 	new file : dosyaAdi
+			 * Kirmizi: 'Untracked Files' : Degisiklik yapildiktan sonra git add komutu calistirilmamis dosyalar burada gorunur. Bu dosyalar WS'den hicbir yere gitmemis, degisiklikler yalnizca IDE'mizde duruyor. Gorunum sekli soyledir: 
+			 	modified : fileName
+			 * Kirmizi: Change not stage for commit: Degisiklik yapildiktan sonra git add komutu calistirilmamis dosyalar burada gorunur. Bu dosyalar WS'den hicbir yere gitmemis, degisiklikler yalnizca IDE'mizde duruyor. Gorunum sekli soyledir: 
+			 	modified : fileName
+
+git add : Dosyayi WS'den SA'ya tasir. WS --> SA
+		    WS 	 	   SA 		  LR
+		  1.copy 	 2.copy 	3.copy
+		 * Eger WS'de dosya degismisse SA'daki dosya da degisir
+		 * Eger WS'de dosya silinmisse SA'daki dosya da silinir 
+		 * WS'de gerceklesen her degisiklik birebir SA'ya gecer 
+
+git add dosyaAdi : Adi belirtilen dosyayi stage'e ekler
+
+git add . : Tum klasoru stage'e ekler
+
+--------------------------------------------------------------------------------------
+LOCAL REPOSITORY
+--------------------------------------------------------------------------------------
+
+git log : Commitleri listeler. 
+		  (Commit id'nin tamamini ve username/useremail gibi detayli bilgileri icerir)
+
+git log --pretty=oneline : Commitleri tek satirda ozet halde ancak id'nin tamamini
+						   gostererek verir
+
+git log --oneline : Commitleri tek satirda ozet halde ve id'nin ilk 7 hanesini
+ 					gostererek verir
+
+git show commitID : Commit icinde yapilan degisiklikleri gosterir
+
+git commit -m "first commit" : Dosyayi SA'dan LR'ya tasir ve versiyon(commit) haline
+							   getirir
+
+git commit -a -m "first commit" : Working Place --> Staging Area --> Local Repository
+								  adimlarini tek seferde yaparak WP'de yer alan her seyi commit haline getirir.
+
+
+
+
+
+
+
