@@ -1,0 +1,1 @@
+bu dosyaya eklemeler yapacagim ve checkout ile restore arasindaki farki gorecegim 
