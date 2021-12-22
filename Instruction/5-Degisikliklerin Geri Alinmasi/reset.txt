@@ -1,0 +1,49 @@
+RESET
+
+git reset --option target
+komutu icin oncelikle tanimlarimizi yazalim. Ve buraya git documantasyon'dan alinan 2 fotograf koyuyorum. Anlasilmasi adina guzel vaka tablolari icermekte.
+Komut aciklamalarini okuduktan sonra mutlaka fotograflara gidip tablolari inceleyiniz.
+
+git reset --soft id : Local Repo verilen id'deki commit'e dondurulur ve id
+					  sonrasinda yer alan tum commitler, commit listesinden silinir. Yani commit history'de kalici bir degisiklik yapilmis olur. Ancak degisiklikler working space'den ve staging area'dan silinmez 
+
+git reset --mixed id : id'si verilen commit'e geri donulur. Ve id'den sonra yer
+					   alan tum commitler commit history'den silinir. 
+					   Duzenlenen dosyalar stage'den silinir ve untracked hale gelir.
+					   Dosyalardaki degisiklikler working space'den silinmez ve gorunmeye devam eder.
+
+git reset --hard id : Local repo verilen id'deki commit'e dondurulur ve 
+					  id'sonrasinda yer alan tum commitler commit history'den silinir. Dosyalarda yapilan degisiklikler hem stage'den hem de working spae'den de silinir. Her sey ucup gider. Kulanirken cok dikkatli olmalisin !!!
+					  Ve de eger silinecek commitleri baska biri ile paylastiysan bu komutu kullanman onerilmez. rebase komutlarindan yardim alabilirsin
+
+NOTES: Bu komutlarda id yazmak yerine HEAD~1 gibi bir ifade de kullanabilirsin.
+Head'den bir onceki commit demektir
+HEAD^ : sondan bir onceki committir. 
+The last three commits (HEAD, HEAD^, and HEAD~2)
+
+git reset --soft HEAD^ : Bu komut ise genellikle son commitimizde bir seyin 
+						 eksik oldugunu farkedip onu degistirmek istedigimizde veya commit adinda degisiklik yapmak istedigimizde veya her ikisi birden gerceklestiginde kullanilan bir komuttur. Son committe degisiklik yapmaya yarar. -amend ile benzer bir is yapar. 
+						 Undo a commit and redo --> commiti geri alir duzeltir ve yeniden commit eder
+
+git reset : Degisikligi geri almada kullanilir. 
+			However, you already dirtied the index (i.e. your index does not match the HEAD commit). But you know the pull you are going to make does not affect frotz.c or filfre.c, so you revert the index changes for these two files. Your changes in working tree remain there.
+
+git reset fileName : Bu komut git add'in tam tersi olarak calisir. 
+					 Head'i stage'e kopyalar.
+					 restore --staged ile esdegerdir. 
+					 Working space'e dokunmaz. 
+
+--> Bu son komuta alternatif olarak head ile degil de hangi committen kopyalanmasini istiyorsak --source belirtebiliriz
+
+git reset HEAD fileName : Head veya herhangi baska bir commitin id si yazilabilir
+						  Unstaged islemi yapar
+						  Belirtilen dosyayi belirtilen commit ile esler
+						  Yani degisiklikleri geri almis olur.
+git reset --hard : Bu kod
+				   git reset --hard HEAD ile es anlamlidir.
+				   Staging area'yi bosaltir. Working Space'deki degisiklikleri geri alir. 
+
+
+Vaka1:  Ben dosyamda ufak ufak degisiklikler yaptim ve commit sayim cogaldi ve aslinda bu degisikliklerin hepsi tek bir comment'te olsa da olurdu ancak ben --amend ile eklemeyi de unuttum. Bu durumda acaba soft reset ile commit listesinde degisikliklerimden hemen onceki commit'e donsem, yukaridaki bilgiye gore commit listem silinecek ancak working space'im silinmeyecek ve hatta stage'im de silinmeyecek. Bu durumda bir commit yapsam tum degisikliklerim tek bir commit altinda toplanmis olur mu?  Deneyelim. 
+--> Olduuuu, yasasin. Senaryo harika calisti. tum degisiklikler tek bir commit haline geldi. Git show id ile de incelenebilir.
+Burada mixed reset ile de bir cozum uretebiliriz. Ancak stage'den cikarilan dosyalar abzen untracked hale geliyor (henuz bu konu hakkinda detayli bir bilgim yok) ve untracked osyayi tracked hale getirmeyi bilmiyorum. unstage'den sonra dosyalarimizin untracked olmadigini. varsayarsak(denememde olmamisti) reset mixed ile stage'den de cikarilan dosya yeniden commit edilebilmek icin once add sonra commit adimlariyla commit haline gelir. Yani mixed reset + add + commit komutlariyla 3 asamali bir cozum yolumuz olur.  Amacimiz sadece yukaridaki senaryo ise soft reset + new commit komut ikilisi harika ve pratik bir cozum olarak gorunuyor 

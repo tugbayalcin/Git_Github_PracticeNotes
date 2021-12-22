@@ -1,0 +1,74 @@
+REVERT 
+
+git revert id : id numarasi verilen commitin yaptigi degisikligi geri al, diger commitlerin
+			    yaptigi degiiskliklere dokunma demektir
+Bunu yaparken eski commitleri silmez veya degistirmez. Yaptigi degisikligi yeni bir commit olarak kaydeder ve bu commit basinda Revert yazisi ile birlikte commit history'de yer alir.
+
+Bu komut var olan bazi commitlerin yapotigi degisiklikleri geri alir.
+
+Verilen bir veya daha fazla committeki degisiklikleri geri alarak olusan yeni durumu yeni bir commit olarak kaydeder.
+* This requires your working tree to be clean (no modifications from the HEAD commit).
+
+* 1.Calisma alanindaki commit edilmemis degisiklikleri geri almak icin revert yerine git reset (ozellikle de --hard) komutu kullanilmalidir.
+
+*2. Belirli bir doyayi baska bir committeki haline geri almak icin revert yerine git restore (ozellikle de --source) komutu kullanilmalidir
+
+* Ancak yukaridaki iki durumun da calisma alanindaki commit edilmemis degisiklikleri geri almaya yonelik olduguna dikkat edilmelidir. 
+
+***REVERT***
+ 
+--> Geri al demek degildir. 
+--> id numarasi verilen commitin yaptigi degisikligi geri al, diger commitlerin yaptigi degiiskliklere dokunma demektir.
+--> Bundan dolayi bir git revert head dedigimizde head in yani son commitin yaptigi degisiklik geri alinir ve herhangi bir conflict cikmaz.
+--> Ancak ne kadar eski bir commiti revert etmeye calisirsak, o kadar cok conflict cikma olasiligi artar 
+--> Bu komutu calistirmadan once mutlaka calisma agacinin temzi olmasi gerekmektedir.
+--> Conflict olustugunda bana su anki head'in sahip oldugu dosyayi ve id'si verilen commitin  revert edildikten sonraki hali (parent) gosterilir ve cakismanin duzeltilmesi istenir. 
+
+
+Example: 
+
+step1 : Diyelim ki bir dosyamiz ve bu dosyamizin bir tane de commiti var. Buna commit 1 diyelim ve dosyamiz da su sekilde olsun :
+
+One
+Two
+Three
+Four
+
+step 2: Simdi dosyamizdaki bir satirda degisiklik yapalim ve bunu da commit edelim. Buna commit 2 diyelim. Artik doyamiz su hale geldi :
+
+One
+2
+Three
+Four
+
+step 3: Ve son olarak, farklı bir satırı değiştiren 3. commitimizi yapalim. Buna commit 3 diyelim :
+
+One
+2
+Three
+4
+
+step 4: Bu asamada revert ile 2. commitin degisikligini geri almaya calistigimizda, 3. commitin yaptigi degisiklikler bozulmaz ve dosya su sekilde gorunur:
+
+One
+Two
+Three
+4
+
+step 5: simdi ise degisikligini geri almaya calistigimiz commit ile ayni satirlarda degisiklik yapmis 4. bir commitimiz oldugunu varsayalim. Buna da commit 4 diyelim:
+
+One
+TWO
+THREE
+4
+
+step 6: iste simdi commit 2'deki degisiklikleri revert ile geri almaya calistigimizda conflict cikar cunku ayni satir daha sonraki commitlerde zaten degisiklige ugramis. Bu durumda git size hangi versiyonu saklamak isteyeceginizi sorar, conflict i karsiniza cikarir head ve parent durumlarini kıyaslar ve secim yaparak conflict'i cozmenizi ve ardindan revert islemini --continue ile surdurmenizi ister. 
+
+
+
+
+
+
+
+
+

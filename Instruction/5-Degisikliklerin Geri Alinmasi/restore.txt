@@ -1,0 +1,39 @@
+
+RESTORE KOMUTU
+
+Bu komut HEAD'i hareket ettirmez. Kopyalar.
+
+* Stage'den veya commitlerden (head de olur baska bir commit de olur) dosyalari calisma alanina geri yukler.
+
+* Bu komut branch'i guncellemez, yani yeni commit olusturmaz.
+
+* Ayni zamandan stage'de olan dosyalari baska bir committen guncellemek icin de kullanilir
+
+* Stage'e gonderilmis dosyanin geri yuklemesi (restore'u) HEAD'den,
+  Stage'e gonderilmemis dosyalarin geri yuklemesi Stage'den yapilir
+
+* Bundan dolayi stage'e gonderilmis dosyalar icin restore komutunu calistirmak istiyorsak en az 1 commitimizin olmasi gerekir. Aksi takjdirde komut calismaz, hata verir
+
+--> Asagidaki iki komutta Stage'den restore edilir (geri yukleme stage'den yapilir) 
+
+git restore fileName : Bir dosyadaki Stage'e gonderilmemis degisiklikleri geri 
+					   alir (siler).
+
+git restore . : Working Space'deki Stage' gonderilmemis tum degisiklikleri geri
+			    alir (siler)
+
+--> Asagidaki iki komutta Head'den restore edilir (geri yukleme head'den yapilir) 
+
+git restore --staged fileName : Working Space'e dokunmaz.
+							    Stage'deki commitlenmemis degisiklikleri geri alir.
+
+git restore --staged . : Stage tamamen bosaltilir. Stage'deki tum degisiklikler
+						 silinir. Ancak WS'de degisiklikleri gormeye devam ederiz
+
+git restore --staged --worktree fileName : Hem WS'deki hem de SA'daki 
+										   commitlenmemis degisiklikleri geri alir.
+
+* Eger -- ile bir sey belirtilmez ise geri yukleme Stage'den WS'e yapilir. Yani stage'e gonderilmemis degisiklikler geri alinir.
+
+** Farkli bir committen geri yukleme yapmak icin --source yazilmalidir.
+git restore --source=commitidyaz --staged fileName gibi 
