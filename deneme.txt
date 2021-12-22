@@ -1,1 +1,7 @@
 bu dosyaya eklemeler yapacagim ve checkout ile restore arasindaki farki gorecegim 
+
+restore komutunu denedim: ws e eklenen degisiklikler silindi, dosya stage e atilan en son hale geri donduruldu. 
+
+checkout komutunu denedim : ws e eklenen degisiklikler silindi, dosya stage e atilan en son hale geri donduruldu. 
+
+yani ikisi de simdilij ayni isi yapmis gibi gorunuyor. checkout icin help isteyelim bakalim neler yaziyor.

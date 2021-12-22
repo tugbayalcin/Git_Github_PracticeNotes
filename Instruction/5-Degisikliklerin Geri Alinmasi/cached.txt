@@ -1,7 +1,17 @@
+CACHED
+Bu komut ile unstage yapariz.
+rm eki silme komutudur.
+Ancak bu islem sonrasinda dosyalar silinmez. 
+Yalnizca stage'den cikarilir. 
+Yani degisikligi geri almak amaci ile kullandigimizda yalnizca sonradan yaptigimiz degisiklik degil, belirtilen dosyanin tamami stage'den cikarilir.
+Bir nevi onbellegi sil demek oluyor. 
+
+
 git rm --cached fileName komutu icin denemeler yapacagim.
 
 Bilgi: Bu komut working space'e dokunmaz
-	   Staging area'yi siler 
+	   Staging area'yi siler, Belirtilen dosyayi Stage'den tamamen cikarir, diger geri alma komutlari gibi yalnizca degisiklikleri geri almaz. rm silmek/cikarmak anlamina gelir
+	   Dosya stage'den tamamen cikarilir/silinir ancak WS'de durmaya devam eder
 
 Deneyelim bakalim. Asagiya bu oparagraftan bir tane daha kopyalayacagim ve dosyayi stage'e attiktan sonra komutu calistiracagim. Ardindan ws'de degisiklik olup olmadigina, paragrafin hala asagida durup durmadigina bakacak ve git status komutu ile de stage'deki durumuna bakacagim. 
 

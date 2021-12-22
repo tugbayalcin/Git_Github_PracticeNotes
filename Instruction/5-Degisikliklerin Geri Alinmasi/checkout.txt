@@ -1,0 +1,26 @@
+CHECKOUT KOMUTU
+
+* Bu komut HEAD'i hareket etiirir ama committen silmez, calisma agacinin guncellenmesi ile ilgilidir
+* Iki kullanim amaci vardir
+  1) Branchleri degistirir
+  2) Restore working tree files
+  Her iki komutla da yaptigi asil is, bizim git deposunda vaska bir yere gitmemizi saglamasidir
+
+* Bu komut calisma alanimizi gecmisteki herhangi bir duruma (mesela herhangi bir commit'e veya herhangi bir branch'e) getiren genel bir islemdir
+
+* Komutu eger bir dosya adi vererek calistirirsak dosyamiz, Stage'de bulunan haline guncellenecektir, yani yapilan degisiklikler geri alinmis olacaktir.
+
+git checkout fileName : 
+Bu komut dosya adi ile branch adi ayni oldugu durumlarda karisikliga yol acabilir. Bu durumda komut default olarak otomatikmen branch degistirir
+
+git checkout -- fileName : 
+Bir dosyadaki commit edilmemis degisiklikleri geri alir. tum projede geri almak icin git reset --hard kullanilir (--soft da olabilir cunku hard commit history'de kalici degisiklikler yapiyor). Degisiklikleri geri alip dosyanin son commit edilmis haline geri dondurur (DEgisiklikler kalici olarak silinir ve bu islemin geri donusu olmaz )
+
+* Komutu bir dosya adi vermeden calistirirsak dosyamiz HEAD'de bulunan haline guncellenecektir
+
+git checkout -b newBranch : 
+
+git checkout -B newBranch : 
+
+
+NOTE: checkout ve reset in nasi calistigini ve aralarindaki farki gosteren fotograf var. Mutlaka bak

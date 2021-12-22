@@ -1,0 +1,8 @@
+AMEND 
+
+--ad bayrag son committe degisiklik yapilmasini saglar.
+
+git commit --amend -m " new message " : Son commitin mesajini yeniler.
+
+git commit --amend : Son commite dosya eklenmesini saglar
+					 Ornegin: 2 dosyam var. Ikisinde de degisiklik yaptim. Commit olusturdum. Ancak dosyalardan birini stage'e atmamisim ve bu yuzden commit'e eklenmemis oldu. Commitimde yalnizca 1 dosya var. Ama ben her iki dosyanin her iki degisikligin de ayni committe olmasini istiyordum. Bu durumda once geride kalan dosyami git add ile stage'e tasirim. Ardindan bu komutu calistirarak commit icine eklenmesini saglarim.
