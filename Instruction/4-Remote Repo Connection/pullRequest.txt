@@ -1,2 +1,30 @@
+PULL REQUEST
 
+GitHub'daki herhangi bir branch'in yine Github'da bulunan bir diger branch ile (genellikle master icin kullaniriz) birlestirilmesi icin olusturulan istektir.
+
+Localimizde calistigimiz branch'imizi github'a pushladigimizi dusunelim. Bu branch'in remote'da mmaster ile birlestirilmesi gerekiyor. 
+
+Push isleminden sonra github repo'sunda sari kutu icerisinde bir uyariyla karsilasiriz. Uyari kutusunda COMPARE AND PULL REQUEST butonu vardir, bu butona tiklanir. Ardindan github otomatik olarak bir karsilastirma yapar ve conflict olup olmadigina bakar. Conflict yoksa 'Able to Merge' yazisiyla birlikte karsimiza commit kutusu cikar. Buraya commitimizle ilgili mesaj yazabiliriz. Sayfanin altinda ise bu push ile birlikte eklenen dosyalar yesil, cikarilan dosyalar kirmizi renk ile bize gosterilir. Ardindan CREATE PULL REQUEST butonuna tiklanir. 
+
+Bu asamada pull request olusmus ve yoneticiye gonderilmis olur. 
+
+Yonetici sunlari gorebilir;
+*Kim Pull Request talebi olusturmus
+*Ne zaman olusturmus
+*Birlestirmek istedigi branch'ler neler 
+*Conflict var mi yok mu
+Bu bilgilerin tamami yonetici tarafindan gorulur. Ve yonetici isterse pull request'i onaylar istemezse onaylamaz. Her iki durumdada mesaj kutusuna mesajini yazabilir. 
+
+Eger onaylayacaksa MERGE PULL REQUEST butonuna tiklar ve ardindan CONFIRM MERGE butonuna tiklayarak onay islemini gerceklestirir. Islem gerceklestiginde her yer mor olur.
+
+
+MERGE PULL REQUEST : Bu buton branch'den gelen degisiklikleri belirtilen branch'e ekler ve merge etmis olur. Click dedikten sonra kucuk bir mesaj kutusu ile birlikte 'Confirm Merge' adinda bir onay butonu cikar. Bu butonu tiklarsak her yer mor olıur ve birlestirme islemi basariyla tamamlanir.
+
+Bu asamadan sonra eger merge islemini master branch'e yaptiysak ilk branch'i silebilir veya branch'ler arasinda kalmasini saglayabiliriz. Bu secenek bize mor bir kutu icerisinde sunulur.
+
+MErge isleminin onaylandigi kutunun icinde 'Revert' butonu bulunur. Bu buton yapilan islemleri geri dondurmeye yarar. Yani yanlislikla merge ettik ve geri almak istiyorsak hemen revert butonunu kullanabiliriz.
+
+Merge'den Sonra;
+Commitlere gidip, commit id'ye tikalrsak degisikliklerin neler oldugunu gorebiliriz.
+Commitin yaninda verified kutusu cikiyorsa bu; pull request talebinin onaylandigi anlamina gelir. 
 

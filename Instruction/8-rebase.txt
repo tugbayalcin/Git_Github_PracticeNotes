@@ -1,0 +1,16 @@
+REBASE 
+
+Git’de merge ve rebase komutlari benzer islevleri yerine getirmek içcn kullanilir. Her iki komut da bir daldaki degisiklikleri baska bir dala birleşsirmek icin kullanilir. 
+Ancak bu iki komut arasinda commit history olusumu ile ilgili ciddi bir farklilik vardir.
+
+Merge komutu ile A branch'indeki degisiklikler B branch'i ile birlestirildiginde B branch'inin commit history'sinde merge isleminden kaynaklanan ve merge commit adi verilen otomatik olusturulmus bir commit yer alir. Bu commit A ve B branchlerinin history'lerini birbiri ile iliskilendirir.
+--> Merge islemi commit history'nin en ustune tek bir commit olarak eklenir
+
+Rebase komutu kullandigimizda ise ile A branch'indeki her bir commit B branch'ine sanki commit islemi B branch'inde yapılmıs gibi yeniden yazilir. Bu sayede B branch'inin commit history'si sanki tüm degisiklikler bu branch'te olmus gibi düz ve kesintisiz gorunur.
+--> rrebase eden branch'in commit history'si ebase edilen branch'in commit history'sine donusur. 
+
+Ne zaman rebase kullanmaliyiz?
+Rebase komutu local ve kisa sureligine (ornegin bir hata giderme veya deneysel bir calisma icin olusturulan) gecerli branch'ler icin kullanilmali. Paylasilan depolarda rebase komutunkullanilmasi tavsiye edilmez. Cunku rebase sonrasinda projenizin ana branchlerinde degisikliklerin nereden kaynaklandigina dair bir bilgi veya ipucu goremeyiz. Bu durum team calismasini olumsuz yonde etkiler.
+
+
+git rebase branchName : seklinde kullanilir. 
