@@ -1,0 +1,33 @@
+FORK
+
+* Bir baskasinim github'daki projesini kendime alip calismak istiyorum. 
+
+* Github'ina gidip FORK butonuna tikliyorum. Bu islem projenin buyuklugune gore birkac sn/dk surebilir.
+
+* Islem sonunda proje benim github hesabima eklenmis (klonlanmis) olacak.
+
+* Projede calismak ve degisiklik yapmak istiyorsam, bunu github uzerinden yapabilecegim gibi localime cekerek ide'm uzerinden de calismaya devam edebilirim. Bunun icin oncelikle projesi localime clone'lamam gerekiyor : git clone url + ls (klone ve listeleme)
+
+* Projede degisikliklerimi yaptim. Commitledim ve remote depomdaki fork ile aldigim repo'ya (benim repoma) gondermek istiyorum.
+
+* Burada git remote -v dedigimde url listesi karsimiza cikacak, cunku projesi clone ile aldik ve clone ile alinan url ler i add ile eklememe gerek yoktu.
+
+* git push origin master : eger degisikligimi dogrudan master branchte yaptiysam ve ona gondermek istiyorsam bu komutu calistiririm. Eger farkli branch olusturup oradan calismaya devam ettiysem sureci nasil yonetmen gerektigini ve bu komutu nasil modifiy etmen gerektigini biliyorsun. 
+
+* Push islemi basariyla gerceklestikten sonra gidip remote depoya bakmalisin.
+
+* Degisiklikler benim repo'm islendi. Fork ile aldigim diger kullanicinin projesinde iseherhangi bir degisiklik olmadi. O proje ozgunlugunu korumaya devam eder.  
+
+* Ancak eger istersem yaptigim degisikligi ona da bildirebilirim.
+
+* Bunun icin new pull request butonuna tikalaim. Bu asamada projeye eklenenler ve silinenler bana gosterilir.
+
+* Create pull request derim. Burada da istersem basligi ve mesaji degistirebilirim.
+
+* Tekrardan cikan Create Pull Request butonuna tiklarim .
+
+* Ve boylece istek olustu. Ben ayni projeye sahip iki farkli github hesabi arasinda pull request olusturmus oldum. 
+
+* Diger kullanici hesabina girdigi zaman Pull Request sekmesinin altinda 1 yazdigini gorecek. Tikaldigi zaman ekledigimiz istegi gorur. Buna da tikalyip icerigini inceleyebilir. 
+
+* Bu asamdan sonrasi tipki yoneticiye gelen pull request gibi, dilerse onaylar dilerse onaylamaz, dilerse mesaj da ekler dilerse ekleemz

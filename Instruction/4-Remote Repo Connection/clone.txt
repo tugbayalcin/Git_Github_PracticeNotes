@@ -1,0 +1,24 @@
+CLONE
+
+Bu komut iki islev icin de kullanislidir.
+1. Github'da onceden var olan bir projeyi locale cekip calisabilmek icin
+2. Kendi projemizi github'a atmak icin
+
+Step 0: Github'da bos bir repo olustur.
+		Bua dim sifirdan kendi projeni github'a atmak istersen yapilir.
+
+Step 1: Repo'nun url'ini kopyala
+
+Step 2: Projen Varsa -> Terminalde projenin icine gel
+		Projen Yoksa -> Projeyi nereye cekmek istiyorsan oraya gel 
+		ve git clone url komutunu calistir. 
+		Boylece remote url, localine clone'lanmis ve eslesmis oldu.
+		Var olan bir projeyi clone'ladiysak  ve hangi dizin icerisinde bu komutu calistirdiysak orada github reposunun adinda bir klasor olusur ve proje bu klasor icine kopyalanir
+
+Step 3: Projede yaptigin degisikl,ikleri veya ilk defa remote'a atmak istedigin projeyi;
+		git add . + git commit -m" blablabla " + git push (veya git push origin master) komutlarini sirasi ile calistirarak github'a atabilirsin.
+
+
+NOTE: Clone'lana projeye git init YAPILMAZ!!!
+
+NOTE: Proje icinde git remote -v komutunu calistirdigimizda url'in listelendigini gorecegiz. Biz add ile eklemedigimiz halde clone yaptigimizda bu url listeye otomatik olarak eklenir. 

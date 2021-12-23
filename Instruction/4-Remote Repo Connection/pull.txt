@@ -1,0 +1,10 @@
+PULL
+
+Bu komut calisma alanimiz ile uzak repository'miz arasindaki farkliliklari algilar ve farkli olan dosyalari indirip, merge eder. Boylece calisma alani en guncel hale gelmis olur.
+
+Pull komutunu kullandiktan sonra merge islemini yapmamiza gerek yoktur. Cunku zaten pull komutu merge islemini icinde barindirir. Yani aslinda pull basit haliyle ;
+			pull = fetch + merge
+seklindedir de denebilir. Merge islemini de kendisi yaptigi icin degisiklikler komut sonrasinda hemen calisma alaninda gorulur.
+
+git pull origin master : Remote repodaki master barnch2i alir ve bu komutu calisitrdigim
+						 branch'e pull eder. Dogrudan dosyalari indirir ve merge eder. Degisiklikleri aninda calisma alanimizda goruruz.

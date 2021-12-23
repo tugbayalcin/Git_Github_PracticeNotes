@@ -27,6 +27,8 @@ git merge tugba : tugba brnch'i komutu calistirdigimiz branch'e birlestirilir.
 git merge abort :  Merge islemini geri alir.
 				   Merge ederken conflict ortaya cikti veya baska bir sebeple merge islemini geri almak istiyorsak kullaniriz. Conflict icin kullanildiysa kisa vadede hatadan kacma saglar ancak yine de merge etmeye olan ihtiyac devam etmektedir. 
 
+git show branchName : Verilen branch'in commitlerini ve commit detaylarini gosterir.
+
 ----------------------------------------------------------------------------------------
 NOTES
 ----------------------------------------------------------------------------------------

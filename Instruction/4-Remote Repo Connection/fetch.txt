@@ -1,0 +1,41 @@
+FETCH 
+
+* Calisma dizinimiz ile uzak repomuz arasindaki farkliliklari gidermek icin kulanilan komutlardan biridir. (Uzak repodaki degisiklikleri calisma alanina cekmek icin kullanilir)
+
+fetch: Calisma alanimiza uzak repoda var olan tum bilgileri getirir ve bir referans olarak (remote baglanti noktasi) kaydeder. Branch olarak yer alir. Ve biz istersek kendi kopdumuz ile merge edebiliriz. Merge etmedigimiz surece git branch -a komutunu calistirdigimizda kirmizi olarak listelenir.
+
+* git fetch origin master : Remote repoda master baranch'te olup da, komutu calistirdigim
+						    branch'te olmayan degisiklikler locale eklenir. Komut sonrasinda calisma alanimda degisiklik olmaz. Cunku henuz merge islemi yapilmadi. 
+
+* git branch -a : Komutu ile degisikliklerin gelip gelmedigini gorebilirim. 
+				  Burada -a bayragi hem local hem de remote (yani tum) branchlerin gosterilmesini saglar. Kirmizi renk ile gosterilen branch'ler merge edilmemis demektir. 
+
+* git merge origin master : Komutunu calistirarak degisiklikleri calisma alanimiza 
+							ekleyebilriz. 
+
+
+-------------------------------------------------------------------------------------------
+VAKALAR
+-------------------------------------------------------------------------------------------
+
+VAKA 1: 
+Github uzerinden projemde degisiklik yapmak istiyorum. 
+-> Github'da projeye gel
+-> Create nev file dişyerek yeni dosya olusturabilir veya var olan dosyalari acip icerisinde degisiklik yapabilirsin
+->Degisikliklerin commit edilmesi gerekiyor. Burada istersem new branch olarak, istersem master branch'e istersem de var olan herhangi baska bir branch'e commit edebilirim.
+-> Su anda github'daki commit sayim , git'teki commit sayimdan +1 fazla.
+-> Durumu esitlemek icin fetch/pull yapilir
+
+
+VAKA 2: 
+Bir proje uzerinde takim olarak calisiyoruz. Ve bir teammate'im kendi yaptigi degisiklikleri github'a push etmis. Benim projem su andan github'dakiyle ayni degil. Yani guncel degil. Bu durumda oncelikle arkadasimin yaptigi degisikligi localime cekerek projemi en guncel haline getirmem gerekiyor. Bunu yapmaz isem commit sayilarimiz ayni ancak degisikliklerimiz farkli olacagindan conflict cikar, push islemi yaparken hata alirim. Github bana once kendi calisma alanini gunvcelle der. Guncelledikten sonra kendi calismalarimi yapmaya devam edebilirim.
+
+
+
+
+
+
+
+
+
+
